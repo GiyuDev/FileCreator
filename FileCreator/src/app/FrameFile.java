@@ -255,7 +255,7 @@ public class FrameFile extends javax.swing.JFrame {
                 String content = new String(Files.readAllBytes(Paths.get(file_path)));
                 txtArea.setText(content);
             } catch (IOException ex) {
-                Logger.getLogger(FrameFile.class.getName()).log(Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(null, ex.toString());
             }
         } else {
             JOptionPane.showMessageDialog(null, "Please select a file!");
